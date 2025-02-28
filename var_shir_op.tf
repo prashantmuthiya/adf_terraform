@@ -1,11 +1,13 @@
 variable "ir_name" {
   description = "The name of the self-hosted integration runtime."
   type        = string
+  default = "null"
 }
 
 variable "data_factory_id" {
   description = "The ID of the Azure Data Factory where the self-hosted IR will be created."
   type        = string
+  default = "null"
 }
 
 variable "description" {
@@ -50,14 +52,17 @@ variable "timeouts" {
     update = "30m"
     delete = "30m"
   }
+  
 }
 
 variable "role_definition_name" {
   description = "The role definition name for RBAC (e.g., 'Contributor', 'Owner', etc.)"
   type        = string
+  default = "null"
 }
 
 variable "principal_id" {
   description = "The principal ID (client/service principal or managed identity) to assign RBAC."
   type        = string
+  default = "null"
 }
