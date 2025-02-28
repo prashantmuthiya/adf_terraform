@@ -40,13 +40,13 @@ resource "azurerm_data_factory" "example" {
  # customer_managed_key_id          = var.customer_managed_key_id
   #customer_managed_key_identity_id = var.customer_managed_key_identity_id
 
-  dynamic "global_parameter" {
-    for_each = var.global_parameters
-    iterator = param
-    content {
-      name  = param.value["name"]
-      value = param.value["value"]
-      type = param.value["type"]
-    }
-  }
+ # dynamic "global_parameter" {
+  #  for_each = var.global_parameters
+   # iterator = param
+    #content {
+     # name  = param.value["name"]
+      #value = param.value["value"]
+      #type = param.value["type"]
+    #}
+  #}
 }
