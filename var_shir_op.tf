@@ -14,11 +14,11 @@ variable "description" {
   default     = "Self-hosted IR"
 }
 
-variable "tags" {
-  description = "A map of tags to assign to the resource."
-  type        = map(string)
-  default     = {}
-}
+#variable "tags" {
+#  description = "A map of tags to assign to the resource."
+#  type        = map(string)
+#  default     = {}
+#}
 
 variable "auth_keys" {
   description = "A list of authorization keys for the self-hosted IR."
