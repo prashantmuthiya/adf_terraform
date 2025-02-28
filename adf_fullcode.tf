@@ -34,11 +34,11 @@ resource "azurerm_data_factory" "example" {
     }
   }
 
-  managed_virtual_network_enabled = var.managed_virtual_network_enabled
-  public_network_enabled          = var.public_network_enabled
+  #managed_virtual_network_enabled = var.managed_virtual_network_enabled
+  #public_network_enabled          = var.public_network_enabled
 
-  customer_managed_key_id          = var.customer_managed_key_id
-  customer_managed_key_identity_id = var.customer_managed_key_identity_id
+ # customer_managed_key_id          = var.customer_managed_key_id
+  #customer_managed_key_identity_id = var.customer_managed_key_identity_id
 
   dynamic "global_parameter" {
     for_each = var.global_parameters

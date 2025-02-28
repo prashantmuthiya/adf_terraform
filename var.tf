@@ -51,9 +51,9 @@ variable "vsts_configuration" {
 variable "global_parameters" {
   type = map(string)
   default = {
-    param = "value1"
-    param = "value2"
-    param = "value3"
+    param1 = "value1"
+    param2 = "value2"
+    param3 = "value3"
   }
 }
 
