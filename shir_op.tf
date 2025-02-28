@@ -5,24 +5,24 @@ resource "azurerm_data_factory_integration_runtime_self_hosted" "example" {
  # tags                = var.tags
 
   # Auth keys (can be multiple)
-  dynamic "auth_key" {
-    for_each = var.auth_keys != null ? var.auth_keys : []
-    iterator = key
-    content {
-      key_name  = key.value["key_name"]
-      key_value = key.value["key_value"]
-    }
-  }
+#  dynamic "auth_key" {
+ #   for_each = var.auth_keys != null ? var.auth_keys : []
+ #   iterator = key
+ #   content {
+ #     key_name  = key.value["key_name"]
+ #     key_value = key.value["key_value"]
+ #   }
+ # }
 
   # Linked integration runtime configuration
-  dynamic "linked_info" {
-    for_each = var.linked_infos != null ? var.linked_infos : []
-    iterator = link
-    content {
-      linked_integration_runtime_id = link.value["linked_integration_runtime_id"]
-      authorization_type            = link.value["authorization_type"]
-    }
-  }
+#  dynamic "linked_info" {
+#    for_each = var.linked_infos != null ? var.linked_infos : []
+#    iterator = link
+#    content {
+#      linked_integration_runtime_id = link.value["linked_integration_runtime_id"]
+#      authorization_type            = link.value["authorization_type"]
+#    }
+#  }
 
   # Timeouts (create, update, delete)
   dynamic "timeouts" {
