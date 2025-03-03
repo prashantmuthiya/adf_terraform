@@ -1,6 +1,15 @@
-variable "data_factory_id" {}
-variable "connection_string" {}
-variable "integration_runtime_name" {}
+variable "data_factory_id" {
+    type = string
+    default = ""
+}
+variable "connection_string" {
+    type = string
+    default = ""
+}
+variable "integration_runtime_name" {
+    type = string
+    default = ""
+}
 variable "use_key_vault" {
   default = false
 }
