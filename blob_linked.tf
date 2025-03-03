@@ -14,20 +14,20 @@ resource "azurerm_data_factory_linked_service_azure_blob_storage" "example" {
     }
   }
 
-  dynamic "parameters" {
-    for_each = var.parameters != null ? var.parameters : {}
-    iterator = param
-    content {
-      name  = param.key
-      value = param.value
-    }
-  }
+ # dynamic "parameters" {
+ #   for_each = var.parameters != null ? var.parameters : {}
+ #   iterator = param
+ #   content {
+ #     name  = param.key
+ #     value = param.value
+ #   }
+ # }
 
-  dynamic "annotations" {
-    for_each = var.annotations != null ? var.annotations : []
-    iterator = annotation
-    content {
-      annotation = annotation.value
-    }
-  }
+ # dynamic "annotations" {
+ #   for_each = var.annotations != null ? var.annotations : []
+ #   iterator = annotation
+ #   content {
+ #     annotation = annotation.value
+#  }
+#  }
 }
