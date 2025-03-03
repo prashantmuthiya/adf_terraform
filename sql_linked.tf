@@ -7,33 +7,10 @@ resource "azurerm_data_factory_linked_service_azure_sql_database" "example" {
     secret_name          = var.key_vault_secret_name
   }
 
-#  dynamic "annotations" {
-#    for_each = var.annotations
-#    content {
-#      name  = annotations.value.name
-#      value = annotations.value.value
-#    }
-#  }
-
-#  dynamic "parameters" {
-#    for_each = var.parameters
-#    content {
-#      name  = parameters.value.name
-#      value = parameters.value.value
-#    }
-#  }
-}
 
 resource "azurerm_data_factory_linked_service_key_vault" "example" {
   name            = "adf"
   data_factory_id = var.azurerm_data_factory
   key_vault_id    = var.key_vaults_id
 
-#  dynamic "annotations" {
-#    for_each = each.value.annotations
-#    content {
-#      name  = annotations.value.name
-#      value = annotations.value.value
-#    }
-#  }
 }
