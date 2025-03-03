@@ -4,6 +4,12 @@ variable "data_factory_name" {
   default     = " adf"
 }
 
+variable "data_factory_id" {
+    description = "adf id"
+    type = string
+    default = "id"
+}
+
 variable "resource_group_name" {
   description = "The name of the resource group containing the Data Factory."
   type        = string
