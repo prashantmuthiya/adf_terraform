@@ -5,6 +5,7 @@ resource "azurerm_data_factory_linked_service_azure_sql_database" "example" {
   key_vault_connection_string {
     linked_service_name = azurerm_data_factory_linked_service_key_vault.example.name
     secret_name          = var.key_vault_secret_name
+    
   }
 }
 
