@@ -19,19 +19,7 @@ variable "key_vaults" {
   }
 }
 
-variable "annotations" {
-  default = [
-    { name = "Environment", value = "UAT" },
-    { name = "Team", value = "DataOps" }
-  ]
-}
 
-variable "parameters" {
-  default = [
-    { name = "param1", value = "value1" },
-    { name = "param2", value = "value2" }
-  ]
-}
 
 variable "key_vaults_id" {
   type = string
