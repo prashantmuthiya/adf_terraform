@@ -31,11 +31,11 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
   data_factory_id = var.azurerm_data_factory
   key_vault_id    = each.value.key_vault_id
 
-  dynamic "annotations" {
-    for_each = each.value.annotations
-    content {
-      name  = annotations.value.name
-      value = annotations.value.value
-    }
-  }
+#  dynamic "annotations" {
+#    for_each = each.value.annotations
+#    content {
+#      name  = annotations.value.name
+#      value = annotations.value.value
+#    }
+#  }
 }
