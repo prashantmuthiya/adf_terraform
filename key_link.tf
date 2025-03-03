@@ -5,4 +5,4 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
   description     = "Linked Service connecting Data Factory to Azure Key Vault"
 
   }
-}
+
