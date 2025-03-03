@@ -6,7 +6,8 @@ variable "key_vault_name" {
 
 variable "kv_sku" {
     type      = string
-    description = "the sku of the vault to be create "
+    description = "the sku of the vault to be create"
+    default = "Standard"
 }
 
 variable "location" {
@@ -24,15 +25,17 @@ variable "resource_group_name" {
 variable "tenant_id" {
   type        = string
   description = "The tenant ID for Azure Active Directory."
+  default = "null"
 }
 
 variable "data_factory_id" {
   type        = string
   description = "The ID of the existing Data Factory."
+  default = "adf"
 }
 
 variable "linked_service_name" {
   type        = string
   description = "The name of the linked service in Data Factory."
-  default     = " LinkedService"
+  default     = "LinkedService"
 }
