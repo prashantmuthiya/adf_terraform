@@ -27,8 +27,15 @@ variable "annotations" {
 }
 
 variable "parameters" {
+    type = map(string)
+
   default = [
     { name = "param1", value = "value1" },
     { name = "param2", value = "value2" }
   ]
+}
+
+variable "key_vaults_id" {
+  type = string
+  default = "key_vault_id"
 }
