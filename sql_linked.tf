@@ -6,6 +6,7 @@ resource "azurerm_data_factory_linked_service_azure_sql_database" "example" {
     linked_service_name = azurerm_data_factory_linked_service_key_vault.example.name
     secret_name          = var.key_vault_secret_name
   }
+}
 
 
 resource "azurerm_data_factory_linked_service_key_vault" "example" {
