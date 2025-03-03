@@ -4,22 +4,5 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
   key_vault_id    = var.key_vault_id
   description     = "Linked Service connecting Data Factory to Azure Key Vault"
 
-  dynamic "annotations" {
-    for_each = var.annotations != null ? var.annotations : []
-    iterator = annotation
-    content {
-      name  = annotation.value[name]
-      value = annotation.value[value]
-    }
-  }
-
-  dynamic "parameters" {
-    for_each = var.parameters 
-    iterator = param
-    content {
-      name  = param.value.name
-      value = param.value.value
-      
-    }
   }
 }

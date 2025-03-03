@@ -16,15 +16,4 @@ variable "key_vault_id" {
   default = "key_vault_id"
 }
 
-variable "annotations" {
-  description = "A list of annotations for the linked service"
-  type        = list(map(string))
-  default     = []
-}
-
-variable "parameters" {
-  description = "A list of parameters for the linked service"
-  type        = list(map(string))
-  default     = []
-}
 
