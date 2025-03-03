@@ -8,8 +8,8 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
     for_each = var.annotations != null ? var.annotations : []
     iterator = annotation
     content {
-      name  = annotation.value["name"]
-      value = annotation.value["value"]
+      name  = annotation.value[name]
+      value = annotation.value[value]
     }
   }
 
@@ -17,8 +17,8 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
     for_each = var.parameters != null ? var.parameters : []
     iterator = param
     content {
-      name  = param.value["name"]
-      value = param.value["value"]
+      name  = param.value[name]
+      value = param.value[value]
     }
   }
 }
