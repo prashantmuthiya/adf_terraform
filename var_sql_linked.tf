@@ -1,3 +1,7 @@
+variable "azurerm_data_factory" {
+  type = string
+  default = "adf"
+}
 variable "key_vault_secret_name" {
   default = "sql-connection-string"
 }
