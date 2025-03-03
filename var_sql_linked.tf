@@ -27,8 +27,6 @@ variable "annotations" {
 }
 
 variable "parameters" {
-    type = map(string)
-
   default = [
     { name = "param1", value = "value1" },
     { name = "param2", value = "value2" }
