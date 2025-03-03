@@ -28,7 +28,7 @@ resource "azurerm_data_factory_linked_service_key_vault" "example" {
   for_each = var.key_vaults
 
   name            = each.value.name
-  data_factory_id = azurerm_data_factory.example.id
+  data_factory_id = var.azurerm_data_factory
   key_vault_id    = each.value.key_vault_id
 
   dynamic "annotations" {
