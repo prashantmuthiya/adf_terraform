@@ -1,6 +1,7 @@
 variable "linked_service_name" {
   description = "Name of the Key Vault Linked Service"
   type        = string
+  default = "linked_service"
 }
 
 variable "data_factory_id" {
