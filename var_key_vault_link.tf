@@ -12,13 +12,13 @@ variable "kv_sku" {
 variable "location" {
   type        = string
   description = "The location/region where resources will be deployed."
-  default     = "East Uk"
+  default     = "East-Uk"
 }
 
 variable "resource_group_name" {
   type        = string
   description = "The name of the resource group."
-  default     = " RG"
+  default     = "RG"
 }
 
 variable "tenant_id" {
