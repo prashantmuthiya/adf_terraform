@@ -1,0 +1,30 @@
+variable "key_vault_secret_name" {
+  default = "sql-connection-string"
+}
+
+variable "key_vaults" {
+  default = {
+    kv1 = {
+      name         = "keyvault-linked-service-1"
+      key_vault_id = "null"
+      annotations = [
+        { name = "Owner", value = "TeamA" },
+        { name = "Purpose", value = "SQLSecrets" }
+      ]
+    }
+  }
+}
+
+variable "annotations" {
+  default = [
+    { name = "Environment", value = "UAT" },
+    { name = "Team", value = "DataOps" }
+  ]
+}
+
+variable "parameters" {
+  default = [
+    { name = "param1", value = "value1" },
+    { name = "param2", value = "value2" }
+  ]
+}
