@@ -37,6 +37,7 @@ variable "data_factory_id" {
 variable "description" {
   type        = string
   description = "Description of the Data Flow"
+  default = "null"
 }
 
 variable "sources" {
