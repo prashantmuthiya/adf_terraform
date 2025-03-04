@@ -1,5 +1,5 @@
-module "AzureStorageAccount01" {
-  source                      = "../../Cloud_Capability_EaC/Modules/Azure/AzureStorageAccount_Private"
+module "storage" {
+  source                      = "./modules"
   resource_group_name          = var.resource_group_name
   location                     = var.location
   account_tier                 = var.account
