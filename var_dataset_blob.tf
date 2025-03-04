@@ -1,7 +1,7 @@
 variable "data_factory_name" {
   description = "The name of the Data Factory."
   type        = string
-  default     = " adf"
+  default     = "adf"
 }
 
 variable "data_factory_id" {
@@ -13,19 +13,19 @@ variable "data_factory_id" {
 variable "resource_group_name" {
   description = "The name of the resource group containing the Data Factory."
   type        = string
-  default     = " rg"
+  default     = "rg"
 }
 
 variable "name" {
   description = "The name of the Data Factory dataset."
   type        = string
-  default     = " dataset"
+  default     = "dataset"
 }
 
 variable "linked_service_name" {
   description = "The name of the linked service to use for the dataset."
   type        = string
-  default     = " linked-service"
+  default     = "linked-service"
 }
 
 variable "connection_string" {
@@ -43,5 +43,5 @@ variable "storage_account_name" {
 variable "container_name" {
   description = "The name of the Blob Storage container."
   type        = string
-  default     = " container"
+  default     = "container"
 }
