@@ -14,7 +14,7 @@ module "storage" {
 
 resource "azurerm_data_factory_linked_service_azure_blob_storage" "linked_service_azure_blob" {
   name                = var.linked_service_name
-  connection_string   = modules.storage.storage_account_connection_string
+  connection_string   = module.storage.storage_account_connection_string
   data_factory_id     = var.data_factory_id
 }
 
