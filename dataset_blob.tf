@@ -1,5 +1,5 @@
 module "storage" {
-  source                      = "./modules"
+  source                      = "./modules/"
   #resource_group_name          = var.resource_group_name
   location                     = var.location
   account_tier                 = var.account_tier
@@ -7,8 +7,8 @@ module "storage" {
   VnetSpokeRGName              = var.VnetSpokeRGName
   VnetSpokeName                = var.VnetSpokeName
   VnetSpokePESubnetName        = var.VnetSpokePESubnetName
-  #sp_ado_terraform_client_id   = var.sp_ado_terraform_client_id
-  #sp_ado_terraform_client_secret = var.sp_ado_terraform_client_secret
+  sp_ado_terraform_client_id   = var.sp_ado_terraform_client_id
+  sp_ado_terraform_client_secret = var.sp_ado_terraform_client_secret
   tags                         = var.tags
 }
 
