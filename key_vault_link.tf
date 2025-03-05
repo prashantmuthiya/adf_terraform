@@ -2,9 +2,7 @@ module "key_vault" {
   source              = "./modules/"
   resource_group_name = local.resource_group_name
   location            = local.location
-  key_vault_name      = local.key_vault_name
-  kv_sku              = local.kv_sku
-  tenant_id           = local.tenant_id
+  key_vault_name      = 
 }
 
 resource "azurerm_data_factory_linked_service_key_vault" "linked_service_key_vault" {
