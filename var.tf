@@ -20,6 +20,7 @@ variable "linked_service_name" {
 variable "path" {
   description = "The folder path in the Blob Storage."
   type        = string
+  default     = null
 }
 
 variable "parameters" {
