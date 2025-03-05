@@ -49,6 +49,7 @@ variable "annotations" {
 variable "description" {
   description = "A description for the trigger."
   type        = string
+  default     = ""
 }
 
 variable "pipeline_name" {
