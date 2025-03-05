@@ -1,5 +1,5 @@
 module "key_vault" {
-  source              = "./modules/key_vault"
+  source              = "./modules/"
   resource_group_name = local.resource_group_name
   location            = local.location
   key_vault_name      = local.key_vault_name
