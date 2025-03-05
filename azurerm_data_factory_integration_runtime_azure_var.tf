@@ -13,6 +13,7 @@ variable "data_factory_id" {
 variable "location" {
   description = "The Azure location where the Integration Runtime will be created."
   type        = string
+  default     = ""
 }
 
 variable "description" {
