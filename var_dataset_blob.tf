@@ -15,3 +15,11 @@ variable "name" {
   type        = string
   default     = null
 }
+
+#module "example_storage" {
+#  source = "./path-to-your-module"
+
+#  linked_service_name = "example-linked-service"
+#  data_factory_id     = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.DataFactory/factories/example-factory"
+#  name                = "example-dataset"
+#}
