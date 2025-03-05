@@ -6,6 +6,7 @@ resource "azurerm_data_factory_trigger_blob_event" "blob_trigger" {
   blob_path_ends_with     = var.blob_path_ends_with
   ignore_empty_blobs      = var.ignore_empty_blobs
   activated               = var.activated
+  storage_account_id      = var.storage_account_id
 
   annotations             = var.annotations
   description             = var.description
