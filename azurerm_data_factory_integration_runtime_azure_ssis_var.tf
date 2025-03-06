@@ -1,16 +1,19 @@
 variable "name" {
   description = "The name of the Azure SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory in which to associate the SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "location" {
   description = "The location of the SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "description" {
@@ -22,11 +25,13 @@ variable "description" {
 variable "node_size" {
   description = "The node size of the SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "number_of_nodes" {
   description = "The number of nodes in the SSIS Integration Runtime."
   type        = number
+  default     = 1
 }
 
 variable "max_parallel_executions_per_node" {
@@ -38,11 +43,13 @@ variable "max_parallel_executions_per_node" {
 variable "edition" {
   description = "The edition of the SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "license_type" {
   description = "The license type of the SSIS Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "custom_setup_script" {
