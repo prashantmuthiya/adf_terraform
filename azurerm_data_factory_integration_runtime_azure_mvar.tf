@@ -1,16 +1,19 @@
 variable "integration_runtime_name" {
   description = "The name of the Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = ""
 }
 
 variable "location" {
   description = "The location of the Integration Runtime."
   type        = string
+  default     = ""
 }
 
 variable "description" {
