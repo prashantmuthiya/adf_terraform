@@ -1,11 +1,13 @@
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default     = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = ""
 }
 
 variable "description" {
@@ -17,16 +19,19 @@ variable "description" {
 variable "connection_string_insecure" {
   description = "The connection string for accessing the blob storage."
   type        = string
+  default     = ""
 }
 
 variable "key_vault_linked_service_name" {
   description = "The name of the Key Vault linked service."
   type        = string
+  default     = ""
 }
 
 variable "secret" {
   description = "The secret name in Key Vault containing the SAS token."
   type        = string
+  default     = ""
 }
 
 variable "integration_runtime_name" {
