@@ -1,0 +1,78 @@
+variable "linked_service_name" {
+  description = "The name of the linked service."
+  type        = string
+}
+
+variable "data_factory_id" {
+  description = "The ID of the Data Factory."
+  type        = string
+}
+
+variable "description" {
+  description = "The description of the linked service."
+  type        = string
+  default     = ""
+}
+
+variable "connection_string_insecure" {
+  description = "The connection string for accessing the blob storage."
+  type        = string
+}
+
+variable "key_vault_linked_service_name" {
+  description = "The name of the Key Vault linked service."
+  type        = string
+}
+
+variable "secret" {
+  description = "The secret name in Key Vault containing the SAS token."
+  type        = string
+}
+
+variable "integration_runtime_name" {
+  description = "The name of the Integration Runtime to be used by the linked service."
+  type        = string
+  default     = null
+}
+
+variable "additional_properties" {
+  description = "A map of additional properties for the linked service."
+  type        = map(string)
+  default     = {}
+}
+
+variable "annotations" {
+  description = "A list of annotations for the linked service."
+  type        = list(string)
+  default     = []
+}
+
+variable "parameters" {
+  description = "A map of parameters for the linked service."
+  type        = map(string)
+  default     = {}
+}
+
+variable "create_timeout" {
+  description = "Timeout for creating the linked service."
+  type        = string
+  default     = "60m"
+}
+
+variable "read_timeout" {
+  description = "Timeout for reading the linked service."
+  type        = string
+  default     = "5m"
+}
+
+variable "update_timeout" {
+  description = "Timeout for updating the linked service."
+  type        = string
+  default     = "60m"
+}
+
+variable "delete_timeout" {
+  description = "Timeout for deleting the linked service."
+  type        = string
+  default     = "60m"
+}
