@@ -61,23 +61,23 @@ variable "additional_properties" {
 variable "create_timeout" {
   description = "Timeout for creating the linked service."
   type        = string
-  default     = "30m"
+  default     = ""
 }
 
 variable "read_timeout" {
   description = "Timeout for reading the linked service."
   type        = string
-  default     = "30m"
+  default     = ""
 }
 
 variable "update_timeout" {
   description = "Timeout for updating the linked service."
   type        = string
-  default     = "30m"
+  default     = ""
 }
 
 variable "delete_timeout" {
   description = "Timeout for deleting the linked service."
   type        = string
-  default     = "30m"
+  default     = ""
 }
