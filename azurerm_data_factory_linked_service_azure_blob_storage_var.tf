@@ -10,11 +10,11 @@ variable "data_factory_id" {
   default     = ""
 }
 
-variable "sas_uri" {
-  description = "The SAS URI for the Azure Storage Account."
+variable "connection_string_insecure" {
+  description = "The insecure connection string for the Azure Blob Storage."
   type        = string
   sensitive   = true
-  default     = null
+  default     = ""
 }
 
 variable "secret" {
