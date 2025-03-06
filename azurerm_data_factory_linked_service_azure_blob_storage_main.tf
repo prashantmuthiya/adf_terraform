@@ -2,6 +2,7 @@ resource "azurerm_data_factory_linked_service_azure_blob_storage" "linked_servic
   name            = var.linked_service_name
   data_factory_id = var.data_factory_id
   description     = var.description
+  
 
   key_vault_sas_token { 
     linked_service_name = var.linked_service_name  # Ensure this is the correct linked service name for your Key Vault
@@ -9,6 +10,6 @@ resource "azurerm_data_factory_linked_service_azure_blob_storage" "linked_servic
   }
 
   additional_properties = {
-    "sasUri" = var.sas_uri
+    sasuri = var.sas_uri
   }
 }
