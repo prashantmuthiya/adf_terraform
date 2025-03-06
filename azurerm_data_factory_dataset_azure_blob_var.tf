@@ -17,13 +17,13 @@ variable "linked_service_name" {
 }
 
 variable "path" {
-  description = "The path to the folder in the Blob Storage."
+  description = "The folder path where the blob is located."
   type        = string
   default     = ""
 }
 
 variable "filename" {
-  description = "The name of the file in the Blob Storage."
+  description = "The name of the blob file."
   type        = string
   default     = ""
 }
@@ -34,21 +34,28 @@ variable "parameters" {
   default     = {}
 }
 
-variable "additional_properties" {
-  description = "A map of additional properties for the dataset."
-  type        = map(string)
-  default     = {}
-}
-
 variable "description" {
-  description = "A description of the dataset."
+  description = "A description for the dataset."
   type        = string
   default     = ""
 }
 
 variable "folder" {
-  description = "The folder that this dataset is in."
+  description = "The folder that this dataset is located in inside the Data Factory."
   type        = string
   default     = ""
 }
+
+variable "dynamic_path_enabled" {
+  description = "Specifies whether dynamic path is enabled."
+  type        = bool
+  default     = false
+}
+
+variable "dynamic_filename_enabled" {
+  description = "Specifies whether dynamic filename is enabled."
+  type        = bool
+  default     = false
+}
+
 
