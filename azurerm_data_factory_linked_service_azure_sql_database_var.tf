@@ -40,4 +40,11 @@ variable "parameters" {
   default     = {}
 }
 
+variable "connection_string" {
+  description = "The secure connection string for the Azure Blob Storage."
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
 
