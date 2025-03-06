@@ -1,11 +1,13 @@
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default     = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = ""
 }
 
 variable "description" {
@@ -23,6 +25,7 @@ variable "integration_runtime_name" {
 variable "connection_string" {
   description = "The connection string for the Azure SQL Database."
   type        = string
+  default     = ""
 }
 
 variable "key_vault_linked_service_name" {
