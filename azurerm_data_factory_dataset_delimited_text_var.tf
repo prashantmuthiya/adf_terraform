@@ -11,6 +11,7 @@ variable "data_factory_id" {
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default = "value"
 }
 
 variable "column_delimiter" {
@@ -64,16 +65,19 @@ variable "quote_character" {
 variable "container" {
   description = "The name of the Azure Blob Storage container."
   type        = string
+  default = "value"
 }
 
 variable "blob_path" {
   description = "The path to the blob file."
   type        = string
+  default = "value"
 }
 
 variable "blob_filename" {
   description = "The name of the blob file."
   type        = string
+  default = "value"
 }
 
 variable "parameters" {
