@@ -1,19 +1,16 @@
 variable "dataset_name" {
   description = "The name of the dataset."
   type        = string
-  default = "value"
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
-  default = "value"
 }
 
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
-  default = "value"
 }
 
 variable "column_delimiter" {
@@ -34,16 +31,23 @@ variable "encoding" {
   default     = "UTF-8"
 }
 
-variable "compression_level" {
-  description = "The compression level."
-  type        = string
-  default     = "Optimal"
+variable "azure_blob_storage_location" {
+  description = "The Azure Blob Storage location details."
+  type = object({
+    container = string
+    path      = string
+    filename  = string
+  })
+  default = null
 }
 
-variable "compression_codec" {
-  description = "The compression codec."
-  type        = string
-  default     = "gzip"
+variable "compression" {
+  description = "Compression settings."
+  type = object({
+    level = string
+    codec = string
+  })
+  default = null
 }
 
 variable "null_value" {
@@ -64,44 +68,29 @@ variable "quote_character" {
   default     = "\""
 }
 
-variable "container" {
-  description = "The name of the Azure Blob Storage container."
-  type        = string
-  default = "value"
-}
-
-variable "blob_path" {
-  description = "The path to the blob file."
-  type        = string
-  default = "value"
-}
-
-variable "blob_filename" {
-  description = "The name of the blob file."
-  type        = string
-  default = "value"
-}
-
 variable "parameters" {
   description = "A map of parameters."
   type        = map(string)
   default     = {}
 }
 
-variable "schema_column_name" {
-  description = "The name of the schema column."
-  type        = string
-  default     = "Column1"
+variable "schema_columns" {
+  description = "A list of schema columns."
+  type = list(object({
+    name = string
+    type = string
+  }))
+  default = [
+    {
+      name = "Column1"
+      type = "String"
+    }
+  ]
 }
 
-variable "schema_column_type" {
-  description = "The type of the schema column."
-  type        = string
-  default     = "String"
-}
-
+/*
 # Example usage
-/*module "adf_dataset_delimited_text" {
+module "adf_dataset_delimited_text" {
   source = "../path/to/your/module"
 
   dataset_name         = "example_dataset"
@@ -110,16 +99,21 @@ variable "schema_column_type" {
   column_delimiter     = ","
   first_row_as_header  = true
   encoding             = "UTF-8"
-  compression_level    = "Optimal"
-  compression_codec    = "gzip"
+  azure_blob_storage_location = {
+    container = "your-container-name"
+    path      = "your/blob/path"
+    filename  = "example.csv"
+  }
+  compression = {
+    level = "Optimal"
+    codec = "gzip"
+  }
   null_value           = ""
   escape_character     = "\\"
   quote_character      = "\""
-  container            = "your-container-name"
-  blob_path            = "your/blob/path"
-  blob_filename        = "example.csv"
   parameters           = { "param1" = "value1" }
-  schema_column_name   = "Column1"
-  schema_column_type   = "String"
+  schema_columns       = [
+    { name = "Column1", type = "String" },
+    { name = "Column2", type = "Int" }
+  ]
 }*/
-
