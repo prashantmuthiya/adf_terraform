@@ -1,11 +1,13 @@
 variable "dataset_name" {
   description = "The name of the dataset."
   type        = string
+  default = "value"
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default = "value"
 }
 
 variable "linked_service_name" {
