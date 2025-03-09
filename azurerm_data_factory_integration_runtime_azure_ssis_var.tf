@@ -88,3 +88,34 @@ variable "package_store" {
   })
   default = null
 }
+
+/*
+module "ssis_runtime" {
+  source = "./path/to/ssis_runtime_module"
+
+  name                                = "example-ssis-runtime"
+  data_factory_id                     = azurerm_data_factory.example.id
+  location                            = "East US"
+  description                         = "SSIS runtime for data factory"
+  node_size                           = "Standard_D2_v3"
+  number_of_nodes                     = 2
+  max_parallel_executions_per_node     = 2
+  edition                             = "Standard"
+  license_type                        = "BasePrice"
+
+  custom_setup_script = {
+    blob_container_uri = "https://example.blob.core.windows.net/container/setup.sql"
+    sas_token          = "?sv=2021-04-10&ss=b&srt=co&sp=r&se=2025-01-01T00:00:00Z&st=2024-01-01T00:00:00Z&spr=https&sig=exampleSig"
+  }
+
+  vnet_integration = {
+    subnet_id = azurerm_subnet.example.id
+  }
+
+  package_store = {
+    linked_service_name = "example-linked-service"
+    name                = "example-package-store"
+  }
+}
+*/
+
