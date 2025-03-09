@@ -60,3 +60,29 @@ variable "pipelines" {
   }))
   default = null
 }
+
+/*
+// Example module usage
+module "adf_custom_event_trigger" {
+  source                = "./modules/adf_custom_event_trigger"
+  trigger_name          = "example-trigger"
+  data_factory_id       = "example-data-factory-id"
+  eventgrid_topic_id    = "example-eventgrid-topic-id"
+  events                = ["event1", "event2"]
+  subject_begins_with   = "example/subject/"
+  subject_ends_with     = "/suffix"
+  description           = "Example custom event trigger"
+  activated             = true
+  additional_properties = { key1 = "value1", key2 = "value2" }
+  pipelines = [
+    {
+      name       = "example-pipeline"
+      parameters = { param1 = "value1", param2 = "value2" }
+    }
+  ]
+  create_timeout = "40m"
+  read_timeout   = "40m"
+  update_timeout = "40m"
+  delete_timeout = "40m"
+}
+*/
