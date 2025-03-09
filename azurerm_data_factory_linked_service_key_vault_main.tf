@@ -69,3 +69,30 @@ variable "delete_timeout" {
   type        = string
   default     = "60m"
 }
+
+/*
+module "adf_keyvault_linked_service" {
+  source = "./path/to/adf_keyvault_module"
+
+  name                     = "example-linked-service"
+  data_factory_id          = azurerm_data_factory.example.id
+  key_vault_id             = azurerm_key_vault.example.id
+  description              = "Linked service for Key Vault"
+  integration_runtime_name = "AutoResolveIntegrationRuntime"
+
+  parameters = {
+    example_param = "example_value"
+  }
+
+  annotations = ["example-annotation"]
+
+  additional_properties = {
+    property1 = "value1"
+  }
+
+  create_timeout = "60m"
+  read_timeout   = "5m"
+  update_timeout = "60m"
+  delete_timeout = "60m"
+}
+*/
