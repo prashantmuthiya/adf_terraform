@@ -1,5 +1,5 @@
 variable "dataset_name" {
-  description = "The name of the Azure SQL table dataset."
+  description = "The name of the dataset."
   type        = string
   default     = null
 }
@@ -16,7 +16,6 @@ variable "linked_service_id" {
   default     = null
 }
 
-
 variable "table_name" {
   description = "The name of the SQL table."
   type        = string
@@ -30,25 +29,16 @@ variable "annotations" {
 }
 
 variable "dataset_description" {
-  description = "Description of the dataset."
+  description = "A description of the dataset."
   type        = string
   default     = null
 }
 
 variable "schema_columns" {
-  description = "Schema columns for the dataset."
+  description = "A list of schema columns, each containing name and type."
   type = list(object({
     name = string
     type = string
-  }))
-  default     = null
-}
-
-variable "parameters" {
-  description = "Optional parameters for the dataset."
-  type = list(object({
-    name  = string
-    value = string
   }))
   default = null
 }
@@ -65,39 +55,8 @@ variable "folder" {
   default     = null
 }
 
-/*
-module "azure_sql_table_dataset" {
-  source              = "./path/to/your/module"
-  dataset_name        = "example_dataset"
-  data_factory_id     = "your_data_factory_id"
-  linked_service_id   = "your_linked_service_id"
-  table_name          = "example_table"
-  annotations         = ["example_annotation"]
-  dataset_description = "An example Azure SQL table dataset"
-  schema_columns = [
-    {
-      name = "Column1"
-      type = "String"
-    },
-    {
-      name = "Column2"
-      type = "Int"
-    }
-  ]
-  parameters = [
-    {
-      name  = "param1"
-      value = "value1"
-    },
-    {
-      name  = "param2"
-      value = "value2"
-    }
-  ]
-  additional_properties = {
-    property1 = "value1"
-    property2 = "value2"
-  }
-  folder = "example_folder"
+variable "parameters" {
+  description = "the parameters"
+  type = string
+  default = null
 }
-*/
