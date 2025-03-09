@@ -57,6 +57,6 @@ variable "folder" {
 
 variable "parameters" {
   description = "the parameters"
-  type = string
+  type = map(string)
   default = null
 }
