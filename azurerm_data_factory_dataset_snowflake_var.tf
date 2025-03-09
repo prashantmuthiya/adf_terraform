@@ -86,3 +86,35 @@ variable "delete_timeout" {
   type        = string
   default     = "30m"
 }
+
+/*
+// Example usage
+module "snowflake_dataset" {
+  source = "./path/to/your/module"
+
+  dataset_name        = "example_dataset"
+  data_factory_id     = "example_data_factory_id"
+  linked_service_name = "example_linked_service"
+  schema              = "example_schema"
+  table_name          = "example_table"
+  folder              = "example/folder"
+  description         = "Example description"
+
+  parameters = {
+    param1 = "value1"
+    param2 = "value2"
+  }
+
+  annotations = ["example_annotation"]
+
+  schema_columns = [
+    { name = "column1", type = "String", precision = 10, scale = 2 },
+    { name = "column2", type = "Int", precision = 5, scale = 0 }
+  ]
+
+  create_timeout = "30m"
+  read_timeout   = "5m"
+  update_timeout = "30m"
+  delete_timeout = "30m"
+}
+*/
