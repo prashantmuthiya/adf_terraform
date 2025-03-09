@@ -2,16 +2,19 @@
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = null
 }
 
 variable "connection_string" {
   description = "The connection string to the Azure file storage."
   type        = string
+  default     = null
 }
 
 variable "description" {
@@ -47,27 +50,32 @@ variable "integration_runtime" {
 variable "host" {
   description = "The host of the Azure file storage."
   type        = string
+  default     = null
 }
 
 variable "file_share" {
   description = "The file share name."
   type        = string
+  default     = null
 }
 
 # Key Vault Password variables
 variable "key_vault_linked_service_name" {
   description = "The name of the Key Vault linked service."
   type        = string
+  default     = null
 }
 
 variable "key_vault_secret_name" {
   description = "The name of the secret in Key Vault."
   type        = string
+  default     = null
 }
 
 variable "key_vault_user_id" {
   description = "The user ID accessing the secret."
   type        = string
+  default     = null
 }
 
 # Timeouts
