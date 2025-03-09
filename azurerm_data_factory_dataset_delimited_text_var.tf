@@ -1,21 +1,25 @@
 variable "dataset_name" {
   description = "The name of the dataset."
   type        = string
+  default = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default = null
 }
 
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default = null
 }
 
 variable "file_system" {
   description = "The file system (container) in the Azure Blob Storage."
   type        = string
+  default = null
 }
 
 variable "folder_path" {
