@@ -2,26 +2,31 @@
 variable "name" {
   description = "The name of the Snowflake linked service."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = null
 }
 
 variable "connection_string" {
   description = "The Snowflake connection string."
   type        = string
+  default     = null
 }
 
 variable "key_vault_linked_service_name" {
   description = "The name of the Key Vault linked service."
   type        = string
+  default     = null
 }
 
 variable "snowflake_secret_name" {
   description = "The name of the secret in Key Vault containing the Snowflake password."
   type        = string
+  default     = null
 }
 
 variable "description" {
