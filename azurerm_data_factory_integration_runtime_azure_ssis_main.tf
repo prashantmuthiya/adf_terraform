@@ -29,7 +29,7 @@ resource "azurerm_data_factory_integration_runtime_azure_ssis" "ssis_runtime" {
     for_each = var.package_store != null ? [var.package_store] : []
     content {
       linked_service_name = package_store.value.linked_service_name
-      name = package_store.value.name
+      name = package_store..name
     }
   }
 }
