@@ -1,26 +1,31 @@
 variable "dataset_name" {
   description = "The name of the Snowflake dataset."
   type        = string
+  default = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default = ""
 }
 
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default = ""
 }
 
 variable "schema" {
   description = "The schema name in Snowflake."
   type        = string
+  default = ""
 }
 
 variable "table_name" {
   description = "The table name in Snowflake."
   type        = string
+  default = ""
 }
 
 variable "folder" {
