@@ -113,9 +113,10 @@ module "adf_linked_service" {
   description                   = "ADF linked service for Azure file storage"
   annotations                   = ["example-annotation"]
   integration_runtime           = "example-integration-runtime"
+  key_vault_user_id             = "example-user-id"
   host                          = "example.file.core.windows.net"
   file_share                    = "example-share"
-  key_vault_user_id             = "example-user-id"
+  
   
   # Key Vault details
   key_vault_linked_service_name = "example-keyvault-linked-service"
