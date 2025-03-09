@@ -1,21 +1,25 @@
 variable "dataset_name" {
   description = "The name of the MySQL dataset."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = null
 }
 
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default     = null
 }
 
 variable "table_name" {
   description = "The name of the table."
   type        = string
+  default     = null
 }
 
 variable "folder" {
