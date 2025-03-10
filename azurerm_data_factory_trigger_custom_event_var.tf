@@ -59,8 +59,6 @@ variable "pipelines_enabled" {
   default     = false
 }
 
-variable "pipelines" {
-}
 
 variable "name_pipeline" {
   description = "nam of the pipeline"
