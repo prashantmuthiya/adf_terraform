@@ -67,9 +67,7 @@ variable "pipelines" {
   }))
   default = [ {
     name = null 
-    parameters = {
-      null
-    }
+    parameters = null
   } ]
 }
 
