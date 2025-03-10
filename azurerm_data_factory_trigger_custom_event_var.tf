@@ -44,7 +44,7 @@ variable "description" {
 variable "activated" {
   description = "Whether the trigger is activated."
   type        = bool
-  default     = null
+  default     = false
 }
 
 variable "additional_properties" {
@@ -65,7 +65,6 @@ variable "pipelines" {
     name       = string
     parameters = map(any)
   }))
-  default     = null
 }
 
 variable "create_timeout" {
