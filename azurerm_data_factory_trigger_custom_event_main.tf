@@ -12,8 +12,8 @@ resource "azurerm_data_factory_trigger_custom_event" "trigger_custom_event" {
   dynamic "pipeline" {
     for_each = (var.pipelines_enabled == true ? [1] : [])
     content {
-      name       = var.pipelines[0].name
-      parameters = var.pipelines[0].parameters
+      name       = var.name_pipeline 
+      parameters = var.parameters_pipeline
     }
   }
 
