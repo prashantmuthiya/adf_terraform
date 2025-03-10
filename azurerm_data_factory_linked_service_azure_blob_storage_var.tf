@@ -1,103 +1,97 @@
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
-  default     = ""
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
-  default     = ""
 }
 
 variable "description" {
-  description = "The description of the linked service."
+  description = "A description for the linked service."
   type        = string
   default     = ""
 }
 
 variable "connection_string_insecure" {
-  description = "The connection string for accessing the blob storage."
+  description = "Connection string for Azure Blob Storage."
   type        = string
-  default     = ""
+  sensitive   = true
 }
 
 variable "key_vault_linked_service_name" {
   description = "The name of the Key Vault linked service."
   type        = string
-  default     = ""
 }
 
 variable "secret" {
-  description = "The secret name in Key Vault containing the SAS token."
+  description = "The name of the secret in Key Vault."
   type        = string
-  default     = ""
 }
 
 variable "integration_runtime_name" {
-  description = "The name of the Integration Runtime to be used by the linked service."
+  description = "The name of the integration runtime."
   type        = string
   default     = null
 }
 
+variable "storage_kind" {
+  description = "The kind of Azure Blob Storage."
+  type        = string
+  default     = "BlobStorage"
+}
+
+variable "tenant_id" {
+  description = "The tenant ID for managed identity authentication."
+  type        = string
+  default     = null
+}
+
+variable "use_managed_identity" {
+  description = "Specifies whether to use managed identity for authentication."
+  type        = bool
+  default     = false
+}
+
 variable "additional_properties" {
-  description = "A map of additional properties for the linked service."
+  description = "A map of additional properties."
   type        = map(string)
   default     = {}
 }
 
 variable "annotations" {
-  description = "A list of annotations for the linked service."
+  description = "A list of annotations."
   type        = list(string)
   default     = []
 }
 
 variable "parameters" {
-  description = "A map of parameters for the linked service."
+  description = "A map of parameters."
   type        = map(string)
   default     = {}
 }
 
 variable "create_timeout" {
-  description = "Timeout for creating the linked service."
+  description = "Timeout for create operation."
   type        = string
-  default     = "60m"
+  default     = "30m"
 }
 
 variable "read_timeout" {
-  description = "Timeout for reading the linked service."
+  description = "Timeout for read operation."
   type        = string
   default     = "5m"
 }
 
 variable "update_timeout" {
-  description = "Timeout for updating the linked service."
+  description = "Timeout for update operation."
   type        = string
-  default     = "60m"
+  default     = "30m"
 }
 
 variable "delete_timeout" {
-  description = "Timeout for deleting the linked service."
+  description = "Timeout for delete operation."
   type        = string
-  default     = "60m"
+  default     = "30m"
 }
-
-/*
-module "adf_blob_linked_service" {
-  source                         = "./modules/adf_blob_linked_service"
-  linked_service_name             = "example-linked-service"
-  data_factory_id                 = azurerm_data_factory.example.id
-  description                     = "Blob storage linked service"
-  connection_string_insecure      = "DefaultEndpointsProtocol=https;AccountName=example;AccountKey=key;"
-  key_vault_linked_service_name   = "example-keyvault-linked-service"
-  secret                          = "storage-account-key"
-  integration_runtime_name        = "AutoResolveIntegrationRuntime"
-  additional_properties           = {}
-  annotations                     = ["example"]
-  parameters                      = {}
-  create_timeout                  = "30m"
-  read_timeout                    = "5m"
-  update_timeout                  = "30m"
-  delete_timeout                  = "30m"
-}
-*/
