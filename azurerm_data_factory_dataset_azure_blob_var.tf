@@ -66,7 +66,7 @@ variable "schema_columns" {
 
 
 /*module "adf_azure_blob_dataset" {
-  source = "./AzureDataFactory_AZ_dataset_blob"
+  source = "./AzureDataFactory_AZ_dataset_blob" .
 
   dataset_name          = "example-dataset"
   data_factory_id       = "your-data-factory-id"
