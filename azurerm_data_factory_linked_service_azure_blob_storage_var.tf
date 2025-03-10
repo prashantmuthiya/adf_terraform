@@ -1,11 +1,13 @@
 variable "linked_service_name" {
   description = "The name of the linked service."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = null
 }
 
 variable "description" {
@@ -18,16 +20,19 @@ variable "connection_string_insecure" {
   description = "Connection string for Azure Blob Storage."
   type        = string
   sensitive   = true
+  default     = null
 }
 
 variable "key_vault_linked_service_name" {
   description = "The name of the Key Vault linked service."
   type        = string
+  default     = null
 }
 
 variable "secret" {
   description = "The name of the secret in Key Vault."
   type        = string
+  default     = null
 }
 
 variable "integration_runtime_name" {
