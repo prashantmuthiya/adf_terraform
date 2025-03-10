@@ -65,6 +65,12 @@ variable "pipelines" {
     name       = string
     parameters = map(any)
   }))
+  default = [ {
+    name = null 
+    parameters = {
+      null
+    }
+  } ]
 }
 
 variable "create_timeout" {
