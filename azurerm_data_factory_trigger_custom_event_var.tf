@@ -2,46 +2,55 @@
 variable "trigger_name" {
   description = "The name of the custom event trigger."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory."
   type        = string
+  default     = null
 }
 
 variable "eventgrid_topic_id" {
   description = "The ID of the Event Grid topic."
   type        = string
+  default     = null
 }
 
 variable "events" {
   description = "A list of events to trigger the custom event trigger."
   type        = list(string)
+  default     = null
 }
 
 variable "subject_begins_with" {
   description = "The prefix filter for event subject."
   type        = string
+  default     = null
 }
 
 variable "subject_ends_with" {
   description = "The suffix filter for event subject."
   type        = string
+  default     = null
 }
 
 variable "description" {
   description = "A description of the custom event trigger."
   type        = string
+  default     = null
 }
 
 variable "activated" {
   description = "Whether the trigger is activated."
   type        = bool
+  default     = null
 }
 
 variable "additional_properties" {
   description = "Additional properties for the custom event trigger."
   type        = map(string)
+  default     = null
 }
 
 variable "pipelines_enabled" {
@@ -54,32 +63,33 @@ variable "pipelines" {
   description = "A list of pipelines to be executed."
   type = list(object({
     name       = string
-    parameters = map(string)
+    parameters = map(any)
   }))
+  default     = null
 }
 
 variable "create_timeout" {
   description = "Timeout for creating the custom event trigger."
   type        = string
-  default     = "30m"
+  default     = null
 }
 
 variable "read_timeout" {
   description = "Timeout for reading the custom event trigger."
   type        = string
-  default     = "30m"
+  default     = null
 }
 
 variable "update_timeout" {
   description = "Timeout for updating the custom event trigger."
   type        = string
-  default     = "30m"
+  default     = null
 }
 
 variable "delete_timeout" {
   description = "Timeout for deleting the custom event trigger."
   type        = string
-  default     = "30m"
+  default     = null
 }
 
 output "trigger_id" {
