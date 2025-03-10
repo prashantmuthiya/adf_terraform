@@ -87,6 +87,7 @@ output "linked_service_id" {
   value       = azurerm_data_factory_linked_service_synapse.example.id
 }
 
+/*
 # Example usage
 module "synapse_linked_service" {
   source = "./path/to/your/module"
@@ -106,3 +107,4 @@ module "synapse_linked_service" {
   update_timeout                = "30m"
   delete_timeout                = "30m"
 }
+*/
