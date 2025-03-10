@@ -60,15 +60,18 @@ variable "pipelines_enabled" {
 }
 
 variable "pipelines" {
-  description = "A list of pipelines to be executed."
-  type = list(object({
-    name       = string
-    parameters = map(any)
-  }))
-  default = [ {
-    name = null 
-    parameters = null
-  } ]
+}
+
+variable "name_pipeline" {
+  description = "nam of the pipeline"
+  type = string 
+  default = null
+}
+
+variable "parameters_pipeline" {
+  description = "nam of the pipeline"
+  type = map(any)
+  default = null
 }
 
 variable "create_timeout" {
