@@ -1,16 +1,19 @@
 variable "name" {
   description = "The name of the ODBC linked service."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory in which to create the linked service."
   type        = string
+  default     = null
 }
 
 variable "connection_string" {
   description = "The ODBC connection string."
   type        = string
+  default     = null
 }
 
 variable "description" {
