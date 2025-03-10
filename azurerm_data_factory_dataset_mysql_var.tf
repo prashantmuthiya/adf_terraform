@@ -37,13 +37,11 @@ variable "dataset_description" {
 variable "schema_columns" {
   description = "A list of schema columns, each with a name and type."
   type = map(any)
-  default = []
 }
 
 variable "dataset_parameters" {
   description = "A map of parameters for the dataset."
   type        = map(any)
-  default     = {}
 }
 
 variable "dataset_annotations" {
