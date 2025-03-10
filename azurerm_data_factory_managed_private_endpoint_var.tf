@@ -1,16 +1,19 @@
 variable "managed_private_endpoint_name" {
   description = "The name of the Managed Private Endpoint."
   type        = string
+  default     = null
 }
 
 variable "data_factory_id" {
   description = "The ID of the Data Factory in which to create the Managed Private Endpoint."
   type        = string
+  default     = null
 }
 
 variable "target_resource_id" {
   description = "The ID of the target resource to which the Managed Private Endpoint will connect."
   type        = string
+  default     = null
 }
 
 variable "description" {
